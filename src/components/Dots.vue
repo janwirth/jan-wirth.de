@@ -19,24 +19,27 @@ export default {
   display: flex
   margin-left: 20px
 .point
-  opacity: .2
+  opacity: .15
   margin: 10px
   color: transparent
   transition: .2s
 
   border-radius: 50%
   background: black
-  print-color-adjust: exact; 
+  print-color-adjust: exact;
   width: 15px
   height: 15px
 
 
 .entry:hover .point
   transform: scale3d(1.5, 1.5, 1.5)
+  opacity: .6
 
 for child in 1 .. 5
-  .point:nth-child({child})
+  .entry:hover .point:nth-child({child})
     transition-delay: (.02 * (child - 1))s
+  .point:nth-child({child})
+    transition-delay: (.07 * (child - 1))s
 
 @media print
   body

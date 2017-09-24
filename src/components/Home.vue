@@ -5,7 +5,7 @@
     section
       header
         span.job-title Software Engineer&emsp;-&emsp;
-        a(href='mailto:contact@jan-wirth.de') contact@jan-wirth.de
+        a.link(href='mailto:contact@jan-wirth.de') contact@jan-wirth.de
       h1 Jan Wirth
 
     section
@@ -54,16 +54,16 @@
         li.entry
           .testimonal
             blockquote “Jan ist 1nicer boy.”
-            h3.testifier Immanuel Sterzik - immist.io
+            h3.testifier: a.link(target='_blank' href='https://immist.io') Immanuel Sterzik - immist.io
         li.entry
           .testimonal
             blockquote “Within a brief time frame and with great professionalism, Mr. Wirth developed a very good solution for the online presence of Boehle Consuling. I find it easy to recommend Mr. Wirth for a position in this field.”
-            h3.testifier Karl-Heinz Böhle - CEO Boehle Consulting
+            h3.testifier: a.link(target='_blank' href='https://boehle.consulting') Karl-Heinz Böhle - CEO Boehle Consulting
 
         li.entry
           .testimonal
             blockquote “We couldn't have done it without Jan, he is a software engineer I can recommend without any doubt.”
-            h3.testifier Michael Melchger - Engineer Raytheon Anschütz
+            h3.testifier: a.link(target='_blank' href='https://www.linkedin.com/in/mmelchger/') Michael Melchger - Engineer Raytheon Anschütz
 
       footer: .print
         span.page-url jan-wirth.de
@@ -165,5 +165,21 @@ header
   
 .company-logo
   transform: translateX(-17px)
+
+for child in 1 .. 5
+  section:nth-child({child})
+    animation-delay: (.3 * (child - 1))s
+
+@keyframes fade-in
+  0%
+    opacity: 0
+    transform: translateY(20px)
+  100%
+    opacity: 1
+    transform: translateY(0)
+
+section
+  animation: fade-in .5s ease-out
+  animation-fill-mode: both
 
 </style>

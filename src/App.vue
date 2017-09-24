@@ -8,6 +8,7 @@
 // GLOBAL
 body
   margin: 0
+  user-select: none
 
 h1
 h2
@@ -18,6 +19,19 @@ h3
 h2
   font-size: 14px
   opacity: .5
+  position: relative
+
+h2:before
+  opacity: .5
+  position: absolute
+  top: 10px
+  left: -50px
+  width: 35px
+  height: 1px
+  background: black
+  display: block
+  content: ''
+
 
 ul
   padding-left: 0
@@ -69,5 +83,33 @@ body
     display: inline-block
     margin-right: 3em
 
+.link
+  color: inherit
+  text-decoration: none
+
+  display: inline-block
+  position relative
+  transition 0.3s
+  padding: 0 5px // the trick
+  margin: 0 -5px
+
+.link:before
+  content ''
+  border-bottom 1px solid black
+  position absolute
+  bottom 2px
+  left 0
+  right 0
+  margin 0 auto
+  width 0
+  transition 0.3s
+
+.link:hover:before
+  width 100%
+  padding 0 // the other part of the trick
+.link:active
+  background black
+  color white
+  transition none
 
 </style>

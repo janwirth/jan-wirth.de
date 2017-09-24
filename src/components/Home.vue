@@ -1,4 +1,4 @@
-<template lang='pug'>
+<template lang='pug' scoped>
 #home
   //  img(src='../assets/portrait.png' alt='portrait of Jan Wirth')#portrait
   #text-content
@@ -86,70 +86,33 @@ export default {
 }
 </script>
 
-<style lang=stylus>
+<style lang='stylus' scoped>
 
-body
-  margin: 0
-
-h1
-h2
-  font-family: Montserrat, sans-serif;
-
+// HOME
 h1
   font-size: 72px
   line-height: 0
   height: 0
   margin-top: .5em
+  margin-bottom: 1.3em
   letter-spacing: .025em
 
-h2
-  font-size: 14px
-  opacity: .5
-
-h1
-h2
-h3
-  font-weight: 400
-
 section:not(:first-child)
-  margin-top: 100px
+  margin-top: 50px
+
 section:last-child
   margin-bottom: -100px
 
 section
   position: relative
 
-#home
-  font-family: Montserrat, sans-serif;
-  position: relative
-  background: white
-
 @media (min-width: 1000px)
-  #app
-    display: flex
-    justify-content: center
-
   #home
     margin: 0 auto
     flex-grow: 0
     width: 360px
     padding: 200px 150px
-  body
-    padding: 0 50px
 
-@media screen and (max-width: 999px)
-  body
-    padding: 5vw
-
-#portrait
-  position: absolute
-  top: 0
-  left: 0
-  width: 100px
-  height: 139px
-
-li
-  list-style-type: none
 .entry
   display: flex
   align-items: center
@@ -166,8 +129,6 @@ li
 .entry:hover .company-logo
   opacity: 1
 
-ul
-  padding-left: 0
 
 .company-logo
   transition: .3s
@@ -195,10 +156,6 @@ ul
 .testimonal
   margin-bottom: 20px
 
-body
-  max-width: 100vw
-  overflow-x: hidden
-
 header
   height: 30px
   line-height: 30px
@@ -208,31 +165,5 @@ header
   
 .company-logo
   transform: translateX(-17px)
-
-blockquote
-  margin: 0
-
-.print
-  display: none
-
-@media print
-  .print
-    display: initial
-  #home
-    width: 360px
-    margin-left: auto
-    margin-right: auto
-  footer
-    margin-top: 50px
-    text-align: right
-  footer.break-after
-    page-break-after: always
-  .page-url
-    opacity: .3
-    display: inline-block
-    margin-right: 3em
-
-blockquote
-  line-height: 1.7
 
 </style>

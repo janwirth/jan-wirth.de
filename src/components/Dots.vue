@@ -36,7 +36,7 @@ export default {
 
 for child in 1 .. 5
   .point:nth-child({child})
-    transition-delay: (.02 * child)s
+    transition-delay: (.02 * (child - 1))s
 
 @media print
   body

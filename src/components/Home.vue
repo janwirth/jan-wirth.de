@@ -75,12 +75,12 @@
 
 
     section
-      h2 Testimonials
+      h2 Recommendations
       ul
         li.entry
           .testimonal
-            blockquote “Jan ist 1nicer boy.”
-            h3.testifier: a.link(target='_blank' href='https://immist.io') Immanuel Sterzik - immist.io
+            blockquote “Jan is an extremely competent and reliable developer. He manages tasks in an efficient and reliable way, but does not hesitate in giving constructive feedback when a better solution could be achieved. He is a very professional collegue to work with.”
+            h3.testifier: a.link(target='_blank' href='https://matchplan.de') Immanuel Sterzik - CTO Matchplan
         li.entry
           .testimonal
             blockquote “Within a brief time frame and with great professionalism, Mr. Wirth developed a very good solution for the online presence of Boehle Consuling. I find it easy to recommend Mr. Wirth for a position in this field.”
@@ -91,9 +91,16 @@
             blockquote “We couldn't have done it without Jan, he is a software engineer I can recommend without any doubt.”
             h3.testifier: a.link(target='_blank' href='https://www.linkedin.com/in/mmelchger/') Michael Melchger - Engineer Raytheon Anschütz
 
-      footer: .print
-        span.page-url jan-wirth.de
-        span.page-number 2
+    #callout Get in touch!
+
+    section#Imprint: address
+      h2 Imprint
+      a.link(href='mailto:contact@jan-wirth.de') contact@jan-wirth.de
+      div Kurfürstenweg 10/1
+      div 69412 Eberbach
+    footer: .print
+      span.page-url jan-wirth.de
+      span.page-number 2
 
 //    section
 //      h2 Education
@@ -166,6 +173,7 @@ section
   width: 150px
   display: flex
   display: block
+
 #lesz-logo
   transform: scale(.8) translateY(-2px) translateX(-5px)
 #cinteo-logo
@@ -233,9 +241,23 @@ section:not(:hover)
 
 #skills
   z-index: 100
+
 #experience
   z-index: 90
 
 .enterprise .skill-text
   transform: translateY(75px)
+
+address
+  font-style: normal
+  weigth: 0
+  opacity: .5
+  transition: .3s
+
+address:hover
+  opacity: 1
+
+#callout
+  font-size: 47px
+  margin-bottom: -20px
 </style>

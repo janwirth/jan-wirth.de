@@ -17,14 +17,6 @@
             points(v-bind:count='5')
           p.skill-text I have several years of experience developing web applications on a scale from tiny to huge,
             |  I worked alone or with local, distributed, national or international teams.
-
-        li.skill
-          .entry
-            h3 Project Management
-            points(v-bind:count='3')
-          p.skill-text Good product managament means assigning available resources to tasks that improve customer-value.
-            |  In my self-employed work I take over the entire process. This includes consulting, requirements analysis, conception, execution, delivery and operation.
-            |  I also work in product teams, taking care of technical project management.
         li.skill
           .entry
             h3 Automation
@@ -32,6 +24,13 @@
           p.skill-text Automation is key to efficiency and quality.
             |  A successfully automated task has direct positive impact on a enterprise's bottom line.
             |  Automation has a high priority in my work because it creates shared lasting value.
+        li.skill
+          .entry
+            h3 Project Management
+            points(v-bind:count='3')
+          p.skill-text Good product managament means assigning available resources to tasks that improve customer-value.
+            |  In my self-employed work I take over the entire process. This includes consulting, requirements analysis, conception, execution, delivery and operation.
+            |  I also work in product teams, taking care of technical project management.
         li.skill
           .entry
             h3 Design / Art /  UX
@@ -49,19 +48,25 @@
           .entry
             h3 Media
             points(v-bind:count='4')
-          p.skill-text I have solid experience with media processes for both print and digital, including sound.
+          p.skill-text I have solid experience with media processes for both print and digital.
 
-    section
+    section#experience
       h2 Experience
       ul
-        li.entry
+        li.entry.enterprise
           a(target='_blank' href='https://cinteo.com').company-logo-wrap#cinteo-logo: img(src='../assets/cinteo-logo.png' alt='Cinteo company logo').company-logo
-          points(v-bind:count='2')
-        li.entry
-          a(target='_blank' href='https://lesz.cool').company-logo-wrap#lesz-logo: img(src='../assets/lesz-logo.png' alt='Lesz company logo').company-logo
+          p.skill-text
+            |  Cinteo develops enterprise-grade web applications for Mercedes-Benz.
           points(v-bind:count='1')
-        li.entry
+        li.entry.enterprise
+          a(target='_blank' href='https://lesz.cool').company-logo-wrap#lesz-logo: img(src='../assets/lesz-logo.png' alt='Lesz company logo').company-logo
+          p.skill-text
+            |  Lesz creates custom web sites and applications.
+          points(v-bind:count='2')
+        li.entry.enterprise
           a(target='_blank' href='https://visual4.de').company-logo-wrap#visual4-logo: img(src='../assets/visual4-logo.png' alt='visual4 company logo').company-logo
+          p.skill-text
+            |  visual4 designs, developes and distributes web sites, applications and CRM systems.
           points(v-bind:count='3')
 
       footer.break-after: .print
@@ -215,9 +220,10 @@ section
   transition: .1s
   transition-delay: .3s
   background: white
-  padding: 15px 15px 30px
+  padding: 15px 15px 20px
   margin: -10px -15px
 
+.entry:hover .skill-text
 .skill:hover .skill-text
   opacity: 1
 
@@ -226,5 +232,10 @@ section:not(:hover)
   transition-delay: .3s
 
 #skills
-  z-index: 2000
+  z-index: 100
+#experience
+  z-index: 90
+
+.enterprise .skill-text
+  transform: translateY(75px)
 </style>

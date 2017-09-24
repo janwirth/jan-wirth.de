@@ -20,6 +20,8 @@ h2
   font-size: 14px
   opacity: .5
   position: relative
+  text-transform: uppercase
+  letter-spacing: 2px
 
 h2:before
   opacity: .5
@@ -54,8 +56,11 @@ body
     display: flex
     justify-content: center
   body
-    padding: 0 50px
+    padding: 0 70px
 
+@media screen and (max-width: 400px)
+  body
+    transform: scale(0.8) translateY(-10px) translateX(-20px)
 @media screen and (max-width: 999px)
   body
     padding: 5vw

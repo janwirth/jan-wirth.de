@@ -8,27 +8,48 @@
         a.link(href='mailto:contact@jan-wirth.de') contact@jan-wirth.de
       h1 Jan Wirth
 
-    section
+    section#skills
       h2 Skills
       ul
-        li.entry 
-          h3 Web Development
-          points(v-bind:count='5')
-        li.entry 
-          h3 Project Management
-          points(v-bind:count='2')
-        li.entry 
-          h3 Automation
-          points(v-bind:count='2')
-        li.entry 
-          h3 Art & Design
-          points(v-bind:count='3')
-        li.entry 
-          h3 Foreign Languages
-          points(v-bind:count='3')
-        li.entry 
-          h3 Media
-          points(v-bind:count='4')
+        li.skill
+          .entry
+            h3 Web Development
+            points(v-bind:count='5')
+          p.skill-text I have several years of experience developing web applications on a scale from tiny to huge,
+            |  I worked alone or with local, distributed, national or international teams.
+
+        li.skill
+          .entry
+            h3 Project Management
+            points(v-bind:count='3')
+          p.skill-text Good product managament means assigning available resources to tasks that improve customer-value.
+            |  In my self-employed work I take over the entire process. This includes consulting, requirements analysis, conception, execution, delivery and operation.
+            |  I also work in product teams, taking care of technical project management.
+        li.skill
+          .entry
+            h3 Automation
+            points(v-bind:count='4')
+          p.skill-text Automation is key to efficiency and quality.
+            |  A successfully automated task has direct positive impact on a enterprise's bottom line.
+            |  Automation has a high priority in my work because it creates shared lasting value.
+        li.skill
+          .entry
+            h3 Design / Art /  UX
+            points(v-bind:count='3')
+          p.skill-text
+            |  Usability metrics to assess customer experience.
+            |  I understand the value of design for a good product.
+        li.skill
+          .entry
+            h3 Foreign Languages
+            points(v-bind:count='3')
+          p.skill-text
+            |  My English is business fluent. Of French and Spanish I have basic but working knowledge.
+        li.skill
+          .entry
+            h3 Media
+            points(v-bind:count='4')
+          p.skill-text I have solid experience with media processes for both print and digital, including sound.
 
     section
       h2 Experience
@@ -156,6 +177,9 @@ section
 .testimonal
   margin-bottom: 20px
 
+h1
+header
+  white-space: nowrap
 header
   height: 30px
   line-height: 30px
@@ -182,4 +206,25 @@ section
   animation: fade-in .5s ease-out
   animation-fill-mode: both
 
+.skill-text
+  z-index: 2000
+  position: absolute
+  pointer-events: none
+  opacity: 0
+  margin-top: 0
+  transition: .1s
+  transition-delay: .3s
+  background: white
+  padding: 15px 15px 30px
+  margin: -10px -15px
+
+.skill:hover .skill-text
+  opacity: 1
+
+section:not(:hover)
+  transition: .3s
+  transition-delay: .3s
+
+#skills
+  z-index: 2000
 </style>

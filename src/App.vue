@@ -71,27 +71,33 @@ body
 
 @media print
   .print
-    display: initial
-  #home
-    width: 360px
-    margin-left: auto
-    margin-right: auto
-  footer
-    margin-top: 50px
-    text-align: right
-  footer.break-after
-    page-break-after: always
-  footer.no-break
-    page-break-after: avoid
-  .page-url
-    opacity: .3
-    display: inline-block
-    margin-right: 3em
+    display: block
+  #experience
+    margin-bottom: 3cm
+  #recommendations
+    margin-bottom: 8.1cm
+  #Imprint
+    margin-bottom: 2.6cm
+#home
+  width: 360px
+  margin-left: auto
+  margin-right: auto
 
-.link
+
+.page-url
+  opacity: .3
+  display: inline-block
+  margin-right: 3em
+footer
+  margin-top: 50px
+  text-align: right
+  width: 100%
+
+a
   color: inherit
   text-decoration: none
 
+.link
   display: inline-block
   position relative
   transition 0.3s

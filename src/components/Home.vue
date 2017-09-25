@@ -15,7 +15,7 @@
           .entry
             h3 Web Development
             points(v-bind:count='5')
-          p.skill-text I have several years of experience developing web applications on a scale from tiny to huge,
+          p.skill-text I have several years of experience developing web applications on a scale from tiny to huge.
             |  I worked alone or with local, distributed, national or international teams.
         li.skill
           .entry
@@ -23,21 +23,20 @@
             points(v-bind:count='4')
           p.skill-text Automation is key to efficiency and quality.
             |  A successfully automated task has direct positive impact on a enterprise's bottom line.
-            |  Automation has a high priority in my work because it creates shared lasting value.
+            |  Automation is of high priority in my work because it creates shared lasting value.
         li.skill
           .entry
             h3 Project Management
             points(v-bind:count='3')
-          p.skill-text Good product managament means assigning available resources to tasks that improve customer-value.
-            |  In my self-employed work I take over the entire process. This includes consulting, requirements analysis, conception, execution, delivery and operation.
-            |  I also work in product teams, taking care of technical project management.
+          p.skill-text Good managament means assigning available resources to tasks that improve customer-value.
+            |  I have experience in the management of technical projects, events and in my self-employed work.
         li.skill
           .entry
             h3 Design / Art /  UX
             points(v-bind:count='3')
           p.skill-text
-            |  Usability metrics to assess customer experience.
-            |  I understand the value of design for a good product.
+            |  I have used Usability metrics to assess customer experience.
+            |  Because of my background in Art and Design I understand the key value of design for a good product.
         li.skill
           .entry
             h3 Foreign Languages
@@ -52,6 +51,7 @@
 
     section#experience
       h2 Experience
+        span(style='opacity: 0.5')  In years
       ul
         li.entry.enterprise
           a(target='_blank' href='https://cinteo.com').company-logo-wrap#cinteo-logo: img(src='../assets/cinteo-logo.png' alt='Cinteo company logo').company-logo
@@ -69,17 +69,18 @@
             |  visual4 designs, developes and distributes web sites, applications and CRM systems.
           points(v-bind:count='3')
 
-      footer.break-after: .print
-        span.page-url jan-wirth.de
-        span.page-number 1
+    footer#footer-1.print
+      span.page-url jan-wirth.de
+      span.page-number 1
+    div(style='page-break-after: always')
 
 
-    section
+    section#recommendations
       h2 Recommendations
       ul
         li.entry
           .testimonal
-            blockquote “Jan is an extremely competent and reliable developer. He manages tasks in an efficient and reliable way, but does not hesitate in giving constructive feedback when a better solution could be achieved. He is a very professional collegue to work with.”
+            blockquote “Jan is an extremely competent and reliable developer. He manages tasks in an efficient and reliable way, but does not hesitate in giving constructive feedback when a better solution could be achieved. He is a very professional colleague to work with.”
             h3.testifier: a.link(target='_blank' href='https://matchplan.de') Immanuel Sterzik - CTO Matchplan
         li.entry
           .testimonal
@@ -91,31 +92,84 @@
             blockquote “We couldn't have done it without Jan, he is a software engineer I can recommend without any doubt.”
             h3.testifier: a.link(target='_blank' href='https://www.linkedin.com/in/mmelchger/') Michael Melchger - Engineer Raytheon Anschütz
 
-    #callout Get in touch!
-
-    section#Imprint: address
-      h2 Imprint
-      a.link(href='mailto:contact@jan-wirth.de') contact@jan-wirth.de
-      div Kurfürstenweg 10/1
-      div 69412 Eberbach
     footer: .print
       span.page-url jan-wirth.de
       span.page-number 2
+    div(style='page-break-after: always')
 
-//    section
-//      h2 Education
-//      ul
-//        li.entry
-//          a(target='_blank' href='https://hsg-eberbach.de').company-logo-wrap#dhbw-logo: img(src='../assets/hsg-logo.png' alt='Lesz company logo').company-logo
-//        li.entry
-//          a(target='_blank' href='https://dhbw-mosbach.de').company-logo-wrap#cinteo-logo: img(src='../assets/dhbw-logo.png' alt='Cinteo company logo').company-logo
+    section#Tools
+      h2 Tools / Methods
+      p I have successfully used many different technologies and methods.
+      shrinking-list
+        li d3.js
+        li React
+        li Redux
+        li Elm
+        li MobX
+        li AngularJS
+        li VueJS
+        li jQuery
+        li WebPack
+        li ES6
+        li CoffeeScript
+        li CSS
+        li Stylus
+        li Sass
+        li Less
+        li Pug
+        li NodeJS
+        li Data visualisation
+        li E-Mail templating
+        li TDD
+        li BDD
+        li Rapid prototyping
+        li User Story Mapping
+        li Requirements Analysis
+        li Operation
+        li Security
+        li Machine Learning
+        li Web Scraping
+        li Functional Programming
+        li Natural Language Processing
+        li Sound Design
+        li Reason
+        li 3DS Max
+        li Blender
+        li Sketch
+        li Adobe CC
+
+    section#Education
+      h2 Education / Awards
+      ul
+        li.entry.enterprise
+          a(target='_blank' href='https://dhbw-mosbach.de').company-logo-wrap#dhbw-logo: img(src='../assets/dhbw-logo.png' alt='Cinteo company logo').company-logo
+          .company-logo-text B.A. Online Media
+        li.entry.enterprise
+          a(target='_blank' href='http://blog.mercedes-benz-passion.com/2016/04/hack-stuttgart-50-studenten-24-stunden-zehn-ideen-drei-gewinner/').company-logo-wrap: img(src='../assets/ddl-logo.png' alt='Lesz company logo').company-logo
+          .company-logo-text 1st Place Hack.Stuttgart 
+        li.entry.enterprise
+          a(target='_blank' href='https://hsg-eberbach.de').company-logo-wrap#dhbw-logo: img(src='../assets/hsg-logo.png' alt='HSG Eberbach company logo').company-logo
+          .company-logo-text Student Art Award
+
+    #callout Get in touch!
+
+    section#Imprint: address
+      h2: a(href='#Imprint') Imprint
+      a.link(href='mailto:contact@jan-wirth.de') contact@jan-wirth.de
+      .private Kurfürstenweg 10/1
+      .private 69412 Eberbach
+
+    footer: .print
+      span.page-url jan-wirth.de
+      span.page-number 3
 
 
 </template>
 <script>
 import points from './Dots.vue'
+import inlineList from './InlineList.vue'
 export default {
-  components: { points }
+  components: { points, inlineList }
 }
 </script>
 
@@ -187,7 +241,7 @@ section
   width: 100%
 
 
-.testimonal
+.entry:not(:last-child) > .testimonal
   margin-bottom: 20px
 
 h1
@@ -260,4 +314,13 @@ address:hover
 #callout
   font-size: 47px
   margin-bottom: -20px
+
+#Imprint .private
+  opacity: 0
+
+#Imprint:target .private
+  opacity: 1
+
+#Education .company-logo
+  transform: translateX(0)
 </style>

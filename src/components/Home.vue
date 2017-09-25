@@ -257,8 +257,8 @@ header
 .company-logo
   transform: translateX(-17px)
 
-for child in 1 .. 5
-  section:nth-child({child})
+for child in 1 .. 10
+  section:nth-of-type({child})
     animation-delay: (.3 * (child - 1))s
 
 @keyframes fade-in

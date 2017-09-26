@@ -2,7 +2,7 @@
 #home
   //  img(src='../assets/portrait.png' alt='portrait of Jan Wirth')#portrait
   #text-content
-    section
+    section#intro
       header
         span.job-title Software Engineer&emsp;-&emsp;
         a.link(href='mailto:contact@jan-wirth.de') contact@jan-wirth.de
@@ -10,6 +10,7 @@
 
     section#skills
       h2 Skills
+        span(style='opacity: 0.5')  Touch for more
       ul
         li.skill
           .entry
@@ -69,6 +70,15 @@
             |  visual4 designs, developes and distributes web sites, applications and CRM systems.
           points(v-bind:count='3')
 
+    section#linkout
+      h2 References
+        span(style='opacity: 0.5')  And social media
+      .references
+        a.reference(target='_blank' href='https://codepen.io/franzskuffka'): img(src='../assets/codepen-logo.png')
+        a.reference(target='_blank' href='https://github.com/franzskuffka'): img(src='../assets/github-logo.png')
+        a.reference(target='_blank' href='https://linkedin.com/in/janwirth'): img(src='../assets/linkedin-logo.png')
+        a.reference(target='_blank' href='https://xing.de/profile/Jan_Wirth6'): img(src='../assets/xing-logo.jpg')
+
     footer#footer-1.print
       span.page-url jan-wirth.de
       span.page-number 1
@@ -78,10 +88,10 @@
     section#recommendations
       h2 Recommendations
       ul
-        li.entry
-          .testimonal
-            blockquote “Jan is an extremely competent and reliable developer. He manages tasks in an efficient and reliable way, but does not hesitate in giving constructive feedback when a better solution could be achieved. He is a very professional colleague to work with.”
-            h3.testifier: a.link(target='_blank' href='https://matchplan.de') Immanuel Sterzik - CTO Matchplan
+        //li.entry
+        //  .testimonal
+        //    blockquote “Jan is an extremely competent and reliable developer. He manages tasks in an efficient and reliable way, but does not hesitate in giving constructive feedback when a better solution could be achieved. He is a very professional colleague to work with.”
+        //    h3.testifier: a.link(target='_blank' href='https://matchplan.de') Immanuel Sterzik - CTO Matchplan
         li.entry
           .testimonal
             blockquote “Within a brief time frame and with great professionalism, Mr. Wirth developed a very good solution for the online presence of Boehle Consuling. I find it easy to recommend Mr. Wirth for a position in this field.”
@@ -280,15 +290,17 @@ section
   opacity: 0
   margin-top: 0
   transition: .1s
-  transition-delay: .3s
   background: white
   padding: 15px 15px 20px
   margin: -10px -15px
 
 .entry:hover .skill-text
 .skill:hover .skill-text
+  transition-delay: .2s
   opacity: 1
 
+section#intro
+  transition-delay: 0
 section:not(:hover)
   transition: .3s
   transition-delay: .3s
@@ -323,4 +335,19 @@ address:hover
 
 #Education .company-logo
   transform: translateX(0)
+
+.references
+  display: flex
+  justify-content: space-between
+  padding-top: 10px
+
+.reference
+  display: block
+  opacity: .7
+.reference:hover
+  opacity: 1
+.reference img
+  width: 30px
+  height: 30px
+
 </style>
